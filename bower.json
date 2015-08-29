@@ -1,0 +1,13 @@
+{
+  "name": "mean-relational",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "latest",
+    "angular-bootstrap": "laster",
+    "angular-cookies": "latest",
+    "angular-mocks": "latest",
+    "angular-resource": "latest",
+    "angular-route": "latest",
+    "bootstrap": "latest"
+  }
+}
