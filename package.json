@@ -28,7 +28,7 @@
     "express-mysql-session": "^0.4.1",
     "express-session": "1.10.4",
     "forever": "latest",
-    "glob": "~4.0.5",
+    "glob": "latest",
     "grunt": "latest",
     "grunt-cli": "latest",
     "grunt-concurrent": "^2.0.3",
