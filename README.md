@@ -1,4 +1,4 @@
-[![Dependencies Status](https://david-dm.org/jcsena/mean-relational/mean.svg)](https://david-dm.org/jcsena/mean-relational)
+[![Dependency Status](https://david-dm.org/jcsena/mean-relational.svg)](https://david-dm.org/jcsena/mean-relational)
 
 M*EAN Relational
 =====================
