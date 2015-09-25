@@ -1,0 +1,13 @@
+.navbar .nav>li>a.brand {
+    padding-left:20px;
+    margin-left:0
+}
+
+.content {
+    margin-top:60px;
+    width:100%
+}
+
+.img-bread{
+  width: 45px;
+}

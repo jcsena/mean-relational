@@ -1,0 +1,33 @@
+  <div ng-controller="HeaderController as hdctr">
+          <div class="inner">
+              <div class="logo pull-left">
+                  <a class="navbar-brand" ui-sref="home">MEAN</a>
+                  <ul class="navbar-nav nav" ng-show="hdctr.global.authenticated">
+                    <li data-ng-repeat="item in hdctr.menu" ng-show="hdctr.global.user" >
+                        <a ui-sref="{{item.link}}">{{item.title}}</a>
+                    </li>
+                  </ul>
+              </div>
+              <div class="right pull-right">
+                  <ul  class="navbar-nav nav" data-ng-hide="hdctr.global.authenticated">
+                      <li><a ui-sref='auth.register'>Join</a></li>
+                      <li class="divider-vertical"></li>
+                      <li><a ui-sref='auth.login'>Log In</a></li>
+                  </ul>
+
+                  <ul class="navbar-nav nav" data-ng-show="hdctr.global.authenticated">
+
+                    <li class="dropdown" dropdown on-toggle="toggled(open)">
+                        <a href="#" class="dropdown-toggle" dropdown-toggle>
+                            <span>{{hdctr.global.user.name}}</span> <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" ng-click="hdctr.logout()">Log Out</a></li>
+                        </ul>
+                    </li>
+
+                  </ul>
+
+              </div>
+          </div>
+      </div>

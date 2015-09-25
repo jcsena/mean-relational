@@ -1,0 +1,14 @@
+<section ng-init="arctr.findOne()">
+    <span>{{arctr.article.updated_at | date:'medium'}}</span>/
+    <span>{{arctr.article.User.name}}</span>
+    <h2>{{arctr.article.title}}</h2>
+    <div ng-show="arctr.global.user.id == arctr.article.user_id">
+        <a class="btn btn-info btn-xs" href="/articles/{{arctr.article.id}}/edit">
+        	Edit
+        </a>
+        <a class="btn btn-danger btn-xs" ng-click="arctr.remove();">
+          Borrar
+        </a>
+    </div>
+    <div>{{arctr.article.content}}</div>
+</section>

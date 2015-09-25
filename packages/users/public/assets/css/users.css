@@ -1,0 +1,33 @@
+.login-title{
+  font-size: 80px;
+  /*color: #b7b7b7;*/
+  font-weight: 400;
+  letter-spacing: -5px;
+  margin-bottom: 0;
+}
+.login-session{
+  /*color: #eee;*/
+  font-size: 20px;
+}
+
+.m-b{
+  margin-bottom: 15px;
+}
+
+.issue-info-error{
+  width: 93%;
+}
+
+.table-errors table {
+  border: 3px solid #ed5565;
+}
+.table-errors{
+  border-radius: 2px;
+}
+.loginscreen{
+  max-width: 300px;
+  margin: 0 auto;
+}
+.center{
+  text-align: center;
+}

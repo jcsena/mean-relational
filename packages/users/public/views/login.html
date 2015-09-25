@@ -1,0 +1,28 @@
+<div class="middle-box text-center loginscreen  animated fadeInDown">
+    <div>
+        <div>
+            <h2 class="text-info login-title">M*EAN</h2>
+        </div>
+        <p>M*EAN(Mysql, Express, Angular.js, Node.js)
+        </p>
+        <div class="alert alert-danger animated fadeIn" ng-show="lgctr.meanuser.loginError">
+            {{lgctr.meanuser.loginError}}
+        </div>
+
+        <p class="text-info login-session">Sign In</p>
+        <form class="m-t" role="form" ng-submit="lgctr.login()">
+            <div class="form-group">
+                <input  ng-model="lgctr.user.email"  type="email" class="form-control" placeholder="Email"  required>
+            </div>
+            <div class="form-group">
+                <input  ng-model="lgctr.user.password" type="password" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-success btn-block full-width m-b">Sign In</button>
+
+            <!-- <a ui-sref="auth.register"><small>Forget password?</small></a> -->
+
+            <p class="text-muted text-center"><small>Do not have an account?</small></p>
+            <a class="btn btn-sm btn-primary btn-block" ui-sref="auth.register">Sign Up</a>
+        </form>
+    </div>
+</div>
