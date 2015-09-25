@@ -6,8 +6,8 @@
 
     // Enforcing
     "bitwise"       : true,    // true: Prohibit bitwise operators (&, |, ^, etc.)
-    "camelcase"     : true,    // true: Identifiers must be in camelCase
-    "curly"         : true,     // true: Require {} for every new block or scope
+    "camelcase"     : false,    // true: Identifiers must be in camelCase
+    "curly"         : false,     // true: Require {} for every new block or scope
     "eqeqeq"        : true,     // true: Require triple equals (===) for comparison
     "es3"           : false,
     "forin"         : true,     // true: Require filtering for..in loops with obj.hasOwnProperty()
@@ -35,7 +35,7 @@
     "maxparams"     : 10,    // {int} Max number of formal params allowed per function
     "maxdepth"      : 5,    // {int} Max depth of nested blocks (within functions)
     "maxstatements" : 40,    // {int} Max number statements per function
-    "maxcomplexity" : 8,    // {int} Max cyclomatic complexity per function
+    "maxcomplexity" : 12,    // {int} Max cyclomatic complexity per function
     "maxlen"        : false,    // {int} Max number of characters per line
     "varstmt"       : false,    // true: Disallow any var statements. Only `let` and `const` are allowed.
 
@@ -65,7 +65,7 @@
     "shadow"        : false,     // true: Allows re-define variables later in code e.g. `var x=1; x=2;`
     "sub"           : true,     // true: Tolerate using `[]` notation when it can still be expressed in dot notation
     "supernew"      : false,     // true: Tolerate `new function () { ... };` and `new Object;`
-    "validthis"     : false,     // true: Tolerate using this in a non-constructor function
+    "validthis"     : true,     // true: Tolerate using this in a non-constructor function
 
     // Environments
     "browser"       : true,     // Web Browser (window, document, etc)

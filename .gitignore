@@ -9,6 +9,8 @@ lib-cov
 *.pid
 *.gz
 
+*annotated.js
+
 pids
 logs
 results
@@ -23,8 +25,10 @@ bower_components/
 .sass-cache/
 node_modules/
 packages/lib
+packages/bundle
 test/coverage/
 migrations/
+files/
 
 *.local
 

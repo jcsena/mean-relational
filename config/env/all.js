@@ -4,8 +4,8 @@ var path = require('path'),
 module.exports = {
 	root: rootPath,
 	port: process.env.PORT || 3000,
-	modelsDir : rootPath + '/app/models',
     forceSequelizeSync: process.env.FORCE_DB_SYNC==='true',
     enableSequelizeLog: true,
-    expressSessionSecret: '$uper$ecret$e$$ionKey' // replace with your own
+    timezone : '-05:00' ,
+    expressSessionSecret: '$u234r$ecr13t$e$$ionKey123$$para$amto$2' // replace with your own
 };

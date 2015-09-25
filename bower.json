@@ -2,12 +2,15 @@
   "name": "mean-relational",
   "version": "0.0.1",
   "dependencies": {
-    "angular": "latest",
-    "angular-bootstrap": "laster",
-    "angular-cookies": "latest",
-    "angular-mocks": "latest",
-    "angular-resource": "latest",
-    "angular-route": "latest",
-    "bootstrap": "latest"
+    "angular": "~1.4.6",
+    "angular-cookies": "~1.4.6",
+    "angular-mocks": "~1.4.6",
+    "angular-resource": "~1.4.6",
+    "angular-bootstrap": "~0.13.4",
+    "bootstrap": "~3.3.5",
+    "angular-ui-router": "~0.2.15"
+  },
+  "resolutions": {
+    "angular": "1.4.6"
   }
 }

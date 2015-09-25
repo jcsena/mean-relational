@@ -1,4 +1,10 @@
-[![Dependency Status](https://david-dm.org/jcsena/mean-relational.svg)](https://david-dm.org/jcsena/mean-relational)
+[![Dependencies Status](https://david-dm.org/jcsena/mean-relational/mean.svg)](https://david-dm.org/jcsena/mean-relational)
+
+#Config database
+1.create schema database
+2.trunc table asignacion directorio fecha => datetime to date
+
+
 
 M*EAN Relational
 =====================

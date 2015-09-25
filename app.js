@@ -2,7 +2,6 @@
  * Module dependencies.
  */
 var express     = require('express');
-var fs          = require('fs');
 
 /**
  * Main application entry file.
@@ -17,10 +16,12 @@ var db              = require('./config/sequelize');
 var passport        = require('./config/passport');
 var winston         = require('./config/winston');
 
+// console.log(db);
+
 var app = express();
 
 //Initialize Express
-require('./config/express')(app, passport);
+require('./config/express')(app, passport, db);
 
 //Start the app by listening on <port>
 var port = process.env.PORT || config.port;

@@ -1,5 +1,9 @@
+'use strict';
+
 var _ = require('lodash'),
-  glob = require('glob');
+  glob = require('glob'),
+	fs = require('fs'),
+  path = require('path');
 
 // Load app configuration
 
@@ -33,26 +37,29 @@ module.exports.getGlobbedFiles = function(globPatterns, removeRoot) {
 		if (urlRegex.test(globPatterns)) {
 			output.push(globPatterns);
 		} else {
-			    var files = glob.sync(globPatterns)
 
-			    	if (removeRoot) {
-			    	   files = files.map(function(file) {
-			           if(typeof removeRoot === 'object'){
-			            	removeRoot.forEach(function(remp){
-			        	 file = file.replace(remp, '');
-			            	});
-			            return file;
-			          }
-			    	return file.replace(removeRoot, '');
-			    	});
-			    }
+    var files = glob.sync(globPatterns);
 
-    				output = _.union(output, files);
+    	if (removeRoot) {
+    		files = files.map(function(file) {
+          if(typeof removeRoot === 'object'){
+            removeRoot.forEach(function(remp){
+              file = file.replace(remp, '');
+            });
+            return file;
+          }
+    			return file.replace(removeRoot, '');
+    		});
+    	}
+
+    	output = _.union(output, files);
+
 		}
 	}
 
 	return output;
 };
+
 
 /**
  * Get the modules JavaScript files
@@ -77,11 +84,20 @@ module.exports.getCSSAssets = function() {
 };
 
 module.exports.getJavaScriptAssetsGlobals = function() {
-      var output = this.getGlobbedFiles(['./packages/**/*.js'],'./packages');
-      return output;
-}
+    var ext = process.env.NODE_ENV === 'production' ? 'min.js' : 'js';
+      var output = this.getGlobbedFiles([ './packages/**/public/**/*.'+ext], ['./packages','/public']);
+
+      return _.sortBy(output, function(n) { return n.split('/').length;});
+
+};
 
 module.exports.getCSSAssetsGlobals = function(){
-  var output = this.getGlobbedFiles(['./packages/**/*.css'],'./packages');
+  var output = this.getGlobbedFiles(['./packages/**/public/**/*.css'],['./packages','/public']);
   return output;
-}
+};
+
+module.exports.getDirectories = function(srcpath) {
+  return fs.readdirSync(srcpath).filter(function(file) {
+    return fs.statSync(path.join(srcpath, file)).isDirectory();
+  });
+};

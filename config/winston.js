@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Created by Junaid Anwar on 5/28/15.
  */
@@ -13,7 +14,7 @@ logger.add(winston.transports.Console, {
 });
 
 logger.stream = {
-    write: function(message, encoding){
+    write: function(message){
         logger.info(message);
     }
 };
