@@ -21,6 +21,7 @@
     "async": "latest",
     "body-parser": "latest",
     "bower": "latest",
+    "cluster": "^0.7.7",
     "compression": "latest",
     "connect-flash": "latest",
     "connect-multiparty": "^2.0.0",
